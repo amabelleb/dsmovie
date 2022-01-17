@@ -29,11 +29,15 @@ function Listing() {
         });
     }, [pageNumber]);
 
+    const handlePageChange - (newPageNumber : number) => {
+        setPageNumber(newPageNumber);
+    }
+
  
 
     return (
         <>
-            <Pagination />
+            <Pagination page={page}/> onChange={handlePageChange} />
 
             <div key={movie.id} className="container">
                 <div className="row">
